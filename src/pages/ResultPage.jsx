@@ -29,7 +29,7 @@ const ResultPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`https://gcpprod.testexperience.site/getContestRewards?contest_id=${query.get("contest_id")}&territory_id=${query.get("territory_id")}&user_points=${query.get("user_points")}&store_name=${query.get("store_name")}`);
+        const response = await axios.get(`https://gcpprod.testexperience.site/getContestRewardsStore?contest_id=${query.get("contest_id")}&territory_id=${query.get("territory_id")}&user_points=${query.get("user_points")}&store_name=${query.get("store_name")}`);
         setRewardsData(response.data);
         console.log(response.data);
       } catch (error) {
